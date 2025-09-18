@@ -94,3 +94,94 @@ It provides:
 
 ## 🧪 Setup & Running Locally
 
+1. **Clone repo**
+   ```bash
+   git clone https://github.com/jasoncobra3/FinOps-Copilot.git
+   cd FinOps-Copilot
+
+2. **Create environment**
+   ```bash
+   python -m venv .venv
+   source venv/bin/activate  # or venv\\Scripts\\activate (Windows)
+
+3. **Install dependencies:**
+   ```bash
+   pip install -r requirements.tx
+
+4. **Initialize DB**
+   ```bash
+     python -m app.models
+
+5. **Generate Sammple Data**
+   ```bash
+   python scripts/generate_sample_data.py
+
+7. **Ingest sample data**
+   ```bash
+   python scripts/ingest.py  --input data/sample_billing.csv
+   python scripts/seed_resources.py
+   python scripts/update_assignments.py ##generate randomness in data
+
+9. **Build RAG index**
+   ```bash
+   python scripts/build_faiss_index.py
+
+10. **Run FAstAPI Backend**
+    ```bash
+    uvicorn app.main:app --reload
+    
+- FastAPI - http://localhost:8000
+    
+12. **Run Streamlit Frontend**
+    ```bash
+    streamlit run UI/app.py
+     
+- Streamlit - http://localhost:8501
+    
+---
+
+## 📊 Evaluation
+
+**Run RAG retrieval evaluation**
+  ```bash
+     python tests/eval_rag.py
+  ```
+- Outputs Recall@1/3/5 scores in CSV
+- Also includes answer quality scores (1–5 rubric)
+
+---
+## 🧠 Design Decisions & Trade-offs
+
+- SQLite chosen for local simplicity, can migrate to PostgreSQL later
+- FAISS is fast and lightweight for demo scale (vs hosted vector DBs)
+- LangChain simplifies orchestration but adds abstraction → documented clearly
+- Streamlit is quick to build for MVP, though not production-grade
+- Groq LLM chosen to avoid dependency on paid APIs
+
+---
+
+## 🚀 Future Work
+
+- Migrate to PostgreSQL for multi-user deployments
+- Add real billing data ingestion from cloud APIs
+- Implement cost optimization engine (idle resource detection, right-sizing)
+- Add user auth + role-based access control
+- Enhance Streamlit UI (filters, charts, reports)
+- Deploy on Railway or Render with CI/CD
+
+---
+
+## 📸 Screenshots
+| Dashboard KPI View| Month DropDown | Reccommendations |
+|----------------|------------|---------------|
+| ![](docs/Assets/Screenshot_1.png) | ![](docs/Assets/Screenshot_2.png) | ![](docs/Assets/Screenshot_3.png)|
+
+| Underutilized resources| AI RAG Chatbot | Response With Resource group |
+|----------------|------------|---------------|
+|![](docs/Assets/Screenshot_5.png)| ![](docs/Assets/Screenshot_7.png) | ![](docs/Assets/Screenshot_8.png) |
+
+---
+## 🌟 Contributing
+**Feel free to fork, star, or submit a pull request to contribute improvements!**
+
+
