@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "question": "What should I do about unassigned resources?",
+    "expected_answer": "Resources should be assigned owners and environments for proper cost attribution. Check the FinOps documentation for tagging policies.",
+    "system_answer": "To address the unassigned resources, I recommend the following actions:\n\n- Terminate or stop resources \"res-11\" and \"res-45\" since they have been idle for more than 30 days. The total estimated savings would be (112.01 + 5.01 + 6.08 + 21.30) \u00d7 0.7, which is approximately 81.49. [source: finops_1]\n- Identify the owners and environments for the resources and reassign them accordingly to prevent unassigned ownership and ensure accurate cost attribution. [source: finops_2]\n\nAs a result of missing tags, the spend remains unknown, and accountability is prevented. Proper tagging is essential for accurate cost tracking and informed FinOps decisions.",
+    "context_required": [
+      "tagging policy",
+      "resource ownership"
+    ],
+    "quality_score": null,
+    "notes": ""
+  },
+  {
+    "id": 2,
+    "question": "How can I reduce costs in the development environment?",
+    "expected_answer": "Review dev resources for optimization opportunities like shutting down outside business hours and right-sizing instances.",
+    "system_answer": "To reduce costs in the development environment, consider the following:\n\n1. **Terminate or stop idle resources**: Check for resources idle >30 days. Since res-30 was idle in 2025-04, we need to terminate or stop it to avoid potential costs. Estimate savings by current monthly cost \u00d7 0.7. However, current usage in subsequent months indicates potential for cost reduction in 2025-09 (43.65).\n\n2. **Right-size compute**: Review your instance families to ensure they have lower unit costs. If possible, scale vertically only when necessary to avoid unnecessary costs.\n\n3. **Verify tags**: Ensure every resource has the required tags, especially in the development environment. In this case, res-1 and res-30 have 'owner' and 'env' tags, but we should verify if 'project' tags are correctly assigned.\n\n4. **Monitor unit cost changes**: Verify sudden unit cost changes and ensure billing currency/units are correct to prevent unexpected costs.\n\n5. **Group small resources**: Consider grouping small resources into aggregated budgets to avoid per-resource billing noise in the development environment.\n\n**Problem:** 'unassigned' ownership for resources res-1 and res-30 [finops_2]. This creates unknown/unattributed spend and prevents cost accountability. Proper tagging is essential for accurate cost attribution and cost optimization.\n\n**Cost Impact:** Estimated savings by terminating or stopping idle resources (res-30) would be based on its current monthly cost, which is not explicitly provided. However, in 2025-05, it cost 30.65. To estimate savings, calculate current monthly cost (assuming constant usage) and apply the 0.7 factor.",
+    "context_required": [
+      "environment costs",
+      "optimization recommendations"
+    ],
+    "quality_score": null,
+    "notes": ""
+  },
+  {
+    "id": 3,
+    "question": "Which team has the highest cloud spending?",
+    "expected_answer": "Based on current data, identify the team with highest costs and spending patterns.",
+    "system_answer": "To determine which team has the highest cloud spending, I'll calculate the total cost for each team.\n\nTeam A: $155.20 (bill_res-6_2025-07)\nTeam B: $155.87 (bill_res-30_2025-08) + $43.65 (bill_res-1_2025-09) = $199.52\nTeam C: $279.19 (bill_res-47_2025-09) + $146.20 (bill_res-47_2025_2025-06) = $425.39\n\nTeam C has the highest cloud spending, with a total of $425.39.",
+    "context_required": [
+      "cost by owner data",
+      "team spending"
+    ],
+    "quality_score": null,
+    "notes": ""
+  },
+  {
+    "id": 4,
+    "question": "What is our current owner coverage percentage?",
+    "expected_answer": "Owner coverage shows percentage of resources with assigned owners vs unassigned.",
+    "system_answer": "To determine the owner coverage percentage, I analyzed the provided context. We have 4 resources: \n\n- res-16 (Storage) with 4 bills ([bill_res-16_2025-06], [bill_res-16_2025-05], [bill_res-16_2025-07])\n- res-55 (Database) with 2 bills ([bill_res-55_2025-05], [bill_res-55_2024-04])\n\nSince both 'res-16' and 'res-55' have a common owner: 'team-A', and there's no resource with 'unassigned' ownership, the owner coverage percentage is 100%. This is because all resources are attributed to an owner, aligning with FinOps guidance on proper tagging for accountability [finops_2].",
+    "context_required": [
+      "coverage metrics",
+      "resource assignments"
+    ],
+    "quality_score": null,
+    "notes": ""
+  },
+  {
+    "id": 5,
+    "question": "How has our monthly spending trend changed?",
+    "expected_answer": "Analysis of month-over-month cost changes and identification of significant variations.",
+    "system_answer": "Based on the provided resources, we see a mix of active and idle resources. However, there's a problem that needs fixing: unassigned ownership in [bill_res-14_2025-09] and [bill_res-60_2025-04] with unknown costs. According to FinOps guidance, missing tags create unknown spend and prevent cost accountability [finops_2].\n\nTo answer the question, we'll focus on the active resources with assigned ownership. We can estimate the monthly spending trend from the provided resources:\n\n- [bill_res-6_2025-07]: $155.20 for 2025-07\n- [bill_res-14_2025-09]: $176.51 for 2025-09\n- [bill_res-30_2025-04]: $206.45 for 2025-04\n- [bill_res-60_2025-04]: $215.61 for 2025-04\n\nUsing these values, we can see a trend of increasing costs over time. However, this trend might be affected by the presence of idle resources, which should be terminated or stopped to optimize costs [finops_1]. To accurately estimate the monthly spending trend, we need to account for idle resources and missing tags.",
+    "context_required": [
+      "monthly costs",
+      "trend analysis"
+    ],
+    "quality_score": null,
+    "notes": ""
+  },
+  {
+    "id": 6,
+    "question": "What are our main cost drivers?",
+    "expected_answer": "Identification of top services or resources contributing to costs.",
+    "system_answer": "Based on the provided context, our main cost drivers seem to be:\n\n1. Idle resources: Since we have a 30-day idle resource termination policy, resources older than 30 days could be contributing to unknown spend. [finops_2]\n2. Missing tags: Resources like \"res-13\" and \"res-10\" have unassigned ownership, which can lead to unknown spend and prevent cost accountability. [finops_2]\n3. High costs in specific environments: Resource res-27 in prod environment had a higher cost ($202.27) compared to the same resource in prod environment in a different month ($149.35). [bill_res-27_2025-04] and [bill_res-27_2025-08]",
+    "context_required": [
+      "cost breakdown",
+      "resource costs"
+    ],
+    "quality_score": null,
+    "notes": ""
+  },
+  {
+    "id": 7,
+    "question": "Are there any idle resources we should address?",
+    "expected_answer": "Identify unused or underutilized resources that could be optimized or terminated.",
+    "system_answer": "According to FinOps guidance, idle resources older than 30 days should be terminated or stopped to estimate savings (0.7 \u00d7 current monthly cost) [finops_1]. \n\nHowever, based on the provided context, there are no idle resources older than 30 days as of the current month.",
+    "context_required": [
+      "resource usage",
+      "optimization opportunities"
+    ],
+    "quality_score": null,
+    "notes": ""
+  },
+  {
+    "id": 8,
+    "question": "What's our cost split between environments?",
+    "expected_answer": "Breakdown of costs between production, development, and staging environments.",
+    "system_answer": "Based on the provided context, we can calculate the cost split between environments. We have resources with the following costs and environments:\n\n- staging: res-9 (2025-04: $165.56, 2025-06: $145.54), res-56 (2025-04: $161.05), res-38 (2025-07: $151.61)\n- Other environments are not specified.\n\nTo calculate the total cost for staging, we add the costs:\n$165.56 + $161.05 + $145.54 + $151.61 = $623.76\n\nHowever, we have no information about costs for other environments. Since we don't have enough data, we can't calculate a cost split. \n\nAs a FinOps assistant, I would recommend ensuring all resources have required tags, including \"env\" to attribute costs to specific environments [source: finops_2]. This will help us track costs accurately in the future.",
+    "context_required": [
+      "environment distribution",
+      "cost allocation"
+    ],
+    "quality_score": null,
+    "notes": ""
+  },
+  {
+    "id": 9,
+    "question": "Have there been any unusual cost spikes recently?",
+    "expected_answer": "Detection of anomalous spending patterns or unexpected cost increases.",
+    "system_answer": "There are no unusual cost spikes mentioned in the provided context. However, we do see a recurring unassigned resource (res-25) in staging environment, which needs to be fixed. According to [finops_2], missing tags create unknown spend and prevent cost accountability.\n\nSpecifically, the compute resource 'res-25' has been incurred costs of $146.32 in 2025-09, $170.72 in 2025-06, and $148.67 in 2025-04, with 'unassigned' ownership in all periods. This is a problem that needs fixing, and we should assign a team or individual to it.\n\nAs per [finops_1], we should terminate or stop resources idle >30 days and estimate the savings by current monthly cost \u00d7 0.7. Since 'res-25' is a recurring cost, its monthly cost would be the total cost divided by the number of months. Let's calculate the monthly cost: ($146.32 + $170.72 + $148.67) / 3 = $165.24. If we terminate it, we can estimate the monthly savings as $165.24 \u00d7 0.7 = $115.57.\n\nAnother issue is resource 'res-11' with 'unassigned' ownership in 2025-05 and no environment specified. This is another problem that needs fixing, and we should assign a team or individual and an environment to it.",
+    "context_required": [
+      "cost patterns",
+      "anomaly detection"
+    ],
+    "quality_score": null,
+    "notes": ""
+  },
+  {
+    "id": 10,
+    "question": "What are the recommended cost optimization actions?",
+    "expected_answer": "List of specific actions to optimize costs based on current analysis.",
+    "system_answer": "Based on the provided context, the recommended cost optimization actions are:\n\n1. Terminate or stop resources idle >30 days; estimate savings by current monthly cost \u00d7 0.7. [source: finops_1]\n2. Review and apply required tags to untagged resources: owner, project, and env. Missing tags create unknown spend and prevent accountability. [source: finops_2]\n\nSpecific actions:\n- Terminate or stop resources idle >30 days (if applicable).\n- Review and reassign ownership (owner tag) for resources with unknown ownership, such as resource res-9 (Compute) and resource res-60 (Compute), to ensure proper cost attribution. [problem: unassigned ownership] [source: finops_2]\n\nNote: The cost savings from terminating idle resources are calculated as follows:\n- Estimated monthly cost of resource res-9 (Compute) = (165.56 / 2) = 82.78\n- Estimated monthly cost of resource res-60 (Compute) = (204.91 / 2) = 102.46\n- Estimated monthly savings = 82.78 \u00d7 0.7 + 102.46 \u00d7 0.7 = 57.74 + 71.73 = 129.47",
+    "context_required": [
+      "optimization recommendations",
+      "action items"
+    ],
+    "quality_score": null,
+    "notes": ""
+  }
+]

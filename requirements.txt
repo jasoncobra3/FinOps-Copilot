@@ -1,0 +1,35 @@
+# Core framework & API
+fastapi
+uvicorn
+
+# Data & ETL
+pandas
+sqlalchemy
+alembic
+python-dotenv
+
+# RAG (embeddings + retrieval)
+langchain
+faiss-cpu
+sentence-transformers
+langchain-groq 
+groq 
+tqdm 
+langchain-community
+langchain-core 
+langchain-text-splitters
+langchain-huggingface
+
+# UI (optional frontend)
+streamlit
+
+# Testing
+pytest
+requests
+plotly
+
+# Utilities & logging
+structlog
+loguru
+langsmith
+guardrails-ai

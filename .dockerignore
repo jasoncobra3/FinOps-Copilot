@@ -1,0 +1,35 @@
+# Python cache and build files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+.build/
+dist/
+
+# Environment & config
+finops/
+.env
+.env.*
+*.log
+
+# Local SQLite data (only include the mounted folder, not host backups)
+*.db
+*.sqlite
+*.sqlite3
+
+# Version control
+.git
+.gitignore
+
+# IDE / editor
+.vscode/
+.idea/
+*.swp
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Docker itself
+docker-compose.override.yml

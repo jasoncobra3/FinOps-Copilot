@@ -1,0 +1,518 @@
+{
+  "res-1": {
+    "owner": "team-C",
+    "env": "dev",
+    "tags": {
+      "project": "project-1",
+      "department": "research",
+      "created_by": "team-C"
+    }
+  },
+  "res-2": {
+    "owner": "team-D",
+    "env": "test",
+    "tags": {
+      "project": "project-1",
+      "department": "engineering",
+      "created_by": "team-D"
+    }
+  },
+  "res-3": {
+    "owner": "team-C",
+    "env": "test",
+    "tags": {
+      "project": "project-2",
+      "department": "data",
+      "created_by": "team-C"
+    }
+  },
+  "res-4": {
+    "owner": "team-A",
+    "env": "staging",
+    "tags": {
+      "project": "project-1",
+      "department": "research",
+      "created_by": "team-A"
+    }
+  },
+  "res-5": {
+    "owner": "team-C",
+    "env": "prod",
+    "tags": {
+      "project": "project-3",
+      "department": "data",
+      "created_by": "team-C"
+    }
+  },
+  "res-6": {
+    "owner": "team-D",
+    "env": "dev",
+    "tags": {
+      "project": "project-3",
+      "department": "data",
+      "created_by": "team-D"
+    }
+  },
+  "res-7": {
+    "owner": "team-A",
+    "env": "prod",
+    "tags": {
+      "project": "project-2",
+      "department": "data",
+      "created_by": "team-A"
+    }
+  },
+  "res-8": {
+    "owner": "team-B",
+    "env": "staging",
+    "tags": {
+      "project": "project-1",
+      "department": "research",
+      "created_by": "team-B"
+    }
+  },
+  "res-9": {
+    "owner": "team-C",
+    "env": "test",
+    "tags": {
+      "project": "project-1",
+      "department": "data",
+      "created_by": "team-C"
+    }
+  },
+  "res-10": {
+    "owner": "team-C",
+    "env": "dev",
+    "tags": {
+      "project": "project-2",
+      "department": "research",
+      "created_by": "team-C"
+    }
+  },
+  "res-11": {
+    "owner": "team-D",
+    "env": "prod",
+    "tags": {
+      "project": "project-2",
+      "department": "engineering",
+      "created_by": "team-D"
+    }
+  },
+  "res-12": {
+    "owner": "team-C",
+    "env": "prod",
+    "tags": {
+      "project": "project-3",
+      "department": "engineering",
+      "created_by": "team-C"
+    }
+  },
+  "res-13": {
+    "owner": null,
+    "env": null,
+    "tags": {}
+  },
+  "res-14": {
+    "owner": "team-D",
+    "env": "dev",
+    "tags": {
+      "project": "project-2",
+      "department": "data",
+      "created_by": "team-D"
+    }
+  },
+  "res-15": {
+    "owner": "team-A",
+    "env": "prod",
+    "tags": {
+      "project": "project-3",
+      "department": "engineering",
+      "created_by": "team-A"
+    }
+  },
+  "res-16": {
+    "owner": "team-A",
+    "env": "prod",
+    "tags": {
+      "project": "project-2",
+      "department": "research",
+      "created_by": "team-A"
+    }
+  },
+  "res-17": {
+    "owner": "team-A",
+    "env": "staging",
+    "tags": {
+      "project": "project-1",
+      "department": "data",
+      "created_by": "team-A"
+    }
+  },
+  "res-18": {
+    "owner": "team-A",
+    "env": "test",
+    "tags": {
+      "project": "project-2",
+      "department": "engineering",
+      "created_by": "team-A"
+    }
+  },
+  "res-19": {
+    "owner": null,
+    "env": null,
+    "tags": {}
+  },
+  "res-20": {
+    "owner": "team-C",
+    "env": "prod",
+    "tags": {
+      "project": "project-3",
+      "department": "data",
+      "created_by": "team-C"
+    }
+  },
+  "res-21": {
+    "owner": "team-A",
+    "env": "staging",
+    "tags": {
+      "project": "project-1",
+      "department": "data",
+      "created_by": "team-A"
+    }
+  },
+  "res-22": {
+    "owner": "team-C",
+    "env": "test",
+    "tags": {
+      "project": "project-2",
+      "department": "engineering",
+      "created_by": "team-C"
+    }
+  },
+  "res-23": {
+    "owner": "team-B",
+    "env": "dev",
+    "tags": {
+      "project": "project-1",
+      "department": "data",
+      "created_by": "team-B"
+    }
+  },
+  "res-24": {
+    "owner": "team-D",
+    "env": "prod",
+    "tags": {
+      "project": "project-1",
+      "department": "research",
+      "created_by": "team-D"
+    }
+  },
+  "res-25": {
+    "owner": "team-D",
+    "env": "test",
+    "tags": {
+      "project": "project-2",
+      "department": "research",
+      "created_by": "team-D"
+    }
+  },
+  "res-26": {
+    "owner": "team-B",
+    "env": "prod",
+    "tags": {
+      "project": "project-3",
+      "department": "engineering",
+      "created_by": "team-B"
+    }
+  },
+  "res-27": {
+    "owner": "team-D",
+    "env": "prod",
+    "tags": {
+      "project": "project-1",
+      "department": "data",
+      "created_by": "team-D"
+    }
+  },
+  "res-28": {
+    "owner": "team-A",
+    "env": "staging",
+    "tags": {
+      "project": "project-3",
+      "department": "research",
+      "created_by": "team-A"
+    }
+  },
+  "res-29": {
+    "owner": "team-D",
+    "env": "prod",
+    "tags": {
+      "project": "project-1",
+      "department": "engineering",
+      "created_by": "team-D"
+    }
+  },
+  "res-30": {
+    "owner": "team-B",
+    "env": "staging",
+    "tags": {
+      "project": "project-1",
+      "department": "research",
+      "created_by": "team-B"
+    }
+  },
+  "res-31": {
+    "owner": "team-C",
+    "env": "prod",
+    "tags": {
+      "project": "project-2",
+      "department": "data",
+      "created_by": "team-C"
+    }
+  },
+  "res-32": {
+    "owner": "team-C",
+    "env": "test",
+    "tags": {
+      "project": "project-3",
+      "department": "research",
+      "created_by": "team-C"
+    }
+  },
+  "res-33": {
+    "owner": "team-A",
+    "env": "dev",
+    "tags": {
+      "project": "project-2",
+      "department": "research",
+      "created_by": "team-A"
+    }
+  },
+  "res-34": {
+    "owner": "team-C",
+    "env": "staging",
+    "tags": {
+      "project": "project-3",
+      "department": "research",
+      "created_by": "team-C"
+    }
+  },
+  "res-35": {
+    "owner": "team-B",
+    "env": "prod",
+    "tags": {
+      "project": "project-1",
+      "department": "engineering",
+      "created_by": "team-B"
+    }
+  },
+  "res-36": {
+    "owner": "team-B",
+    "env": "staging",
+    "tags": {
+      "project": "project-2",
+      "department": "engineering",
+      "created_by": "team-B"
+    }
+  },
+  "res-37": {
+    "owner": null,
+    "env": null,
+    "tags": {}
+  },
+  "res-38": {
+    "owner": "team-C",
+    "env": "staging",
+    "tags": {
+      "project": "project-1",
+      "department": "research",
+      "created_by": "team-C"
+    }
+  },
+  "res-39": {
+    "owner": "team-D",
+    "env": "staging",
+    "tags": {
+      "project": "project-3",
+      "department": "research",
+      "created_by": "team-D"
+    }
+  },
+  "res-40": {
+    "owner": "team-A",
+    "env": "test",
+    "tags": {
+      "project": "project-3",
+      "department": "research",
+      "created_by": "team-A"
+    }
+  },
+  "res-41": {
+    "owner": "team-D",
+    "env": "dev",
+    "tags": {
+      "project": "project-1",
+      "department": "engineering",
+      "created_by": "team-D"
+    }
+  },
+  "res-42": {
+    "owner": "team-B",
+    "env": "prod",
+    "tags": {
+      "project": "project-3",
+      "department": "research",
+      "created_by": "team-B"
+    }
+  },
+  "res-43": {
+    "owner": "team-A",
+    "env": "test",
+    "tags": {
+      "project": "project-1",
+      "department": "data",
+      "created_by": "team-A"
+    }
+  },
+  "res-44": {
+    "owner": "team-B",
+    "env": "test",
+    "tags": {
+      "project": "project-2",
+      "department": "research",
+      "created_by": "team-B"
+    }
+  },
+  "res-45": {
+    "owner": "team-D",
+    "env": "prod",
+    "tags": {
+      "project": "project-3",
+      "department": "data",
+      "created_by": "team-D"
+    }
+  },
+  "res-46": {
+    "owner": null,
+    "env": null,
+    "tags": {}
+  },
+  "res-47": {
+    "owner": "team-D",
+    "env": "dev",
+    "tags": {
+      "project": "project-2",
+      "department": "data",
+      "created_by": "team-D"
+    }
+  },
+  "res-48": {
+    "owner": "team-A",
+    "env": "test",
+    "tags": {
+      "project": "project-1",
+      "department": "data",
+      "created_by": "team-A"
+    }
+  },
+  "res-49": {
+    "owner": "team-C",
+    "env": "prod",
+    "tags": {
+      "project": "project-2",
+      "department": "data",
+      "created_by": "team-C"
+    }
+  },
+  "res-50": {
+    "owner": "team-D",
+    "env": "test",
+    "tags": {
+      "project": "project-2",
+      "department": "engineering",
+      "created_by": "team-D"
+    }
+  },
+  "res-51": {
+    "owner": "team-C",
+    "env": "staging",
+    "tags": {
+      "project": "project-3",
+      "department": "data",
+      "created_by": "team-C"
+    }
+  },
+  "res-52": {
+    "owner": "team-B",
+    "env": "prod",
+    "tags": {
+      "project": "project-2",
+      "department": "data",
+      "created_by": "team-B"
+    }
+  },
+  "res-53": {
+    "owner": "team-B",
+    "env": "test",
+    "tags": {
+      "project": "project-1",
+      "department": "data",
+      "created_by": "team-B"
+    }
+  },
+  "res-54": {
+    "owner": "team-D",
+    "env": "test",
+    "tags": {
+      "project": "project-1",
+      "department": "research",
+      "created_by": "team-D"
+    }
+  },
+  "res-55": {
+    "owner": "team-B",
+    "env": "dev",
+    "tags": {
+      "project": "project-1",
+      "department": "engineering",
+      "created_by": "team-B"
+    }
+  },
+  "res-56": {
+    "owner": null,
+    "env": null,
+    "tags": {}
+  },
+  "res-57": {
+    "owner": "team-A",
+    "env": "test",
+    "tags": {
+      "project": "project-1",
+      "department": "research",
+      "created_by": "team-A"
+    }
+  },
+  "res-58": {
+    "owner": "team-C",
+    "env": "staging",
+    "tags": {
+      "project": "project-3",
+      "department": "data",
+      "created_by": "team-C"
+    }
+  },
+  "res-59": {
+    "owner": null,
+    "env": null,
+    "tags": {}
+  },
+  "res-60": {
+    "owner": "team-B",
+    "env": "staging",
+    "tags": {
+      "project": "project-1",
+      "department": "research",
+      "created_by": "team-B"
+    }
+  }
+}
