@@ -177,11 +177,12 @@ It provides:
 | ![](docs/Assets/Screenshot_1.png) | ![](docs/Assets/Screenshot_2.png) | ![](docs/Assets/Screenshot_3.png)|
 
 | Underutilized resources| AI RAG Chatbot | Response With Resource group |
-|----------------|------------|---------------|
+|----------------|------------|----------------|
 |![](docs/Assets/Screenshot_5.png)| ![](docs/Assets/Screenshot_7.png) | ![](docs/Assets/Screenshot_8.png) |
 
 ---
 ## 🌟 Contributing
 **Feel free to fork, star, or submit a pull request to contribute improvements!**
+
 
 
